@@ -30,3 +30,35 @@ test("One euro should be 1.206 dollars", function(){
     // this is the comparison for the unit test
      expect(fromEuroToDollar(3.5)).toBe(4.2); //1 euro are 1.2 dolares, then 3.5 euros should be = (3.5 * 1.2)
 })
+
+//Testing Dollar to Yen function
+test("One dollar should be 106.58 Yen", function(){
+  
+    const { fromDollartoYen, fromDollarToEuro } = require('./app.js')
+
+   
+    const yen = fromDollartoYen(1)
+
+   
+    const expected1 = 1 * fromDollarToEuro * 127.9; 
+    
+  
+     expect(yen).toBe(expected1); 
+})
+
+
+//Testing Yen to Pound function
+
+test("One Yen should be 0.00625 Pound", function(){
+  
+    const { fromYenToPound, fromYenToEuro } = require('./app.js')
+
+   
+    const pound = fromYenToPound(1)
+
+   
+    const expected2 = 1 * fromYenToEuro * 0.8; 
+    
+  
+     expect(pound).toBe(expected2); 
+})
